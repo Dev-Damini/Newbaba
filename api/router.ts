@@ -1,9 +1,9 @@
-import { authRouter } from "./auth-router";
-import { grantRouter } from "./grant-router";
-import { applicationRouter } from "./application-router";
-import { adminRouter } from "./admin-router";
-import { contactRouter } from "./contact-router";
-import { createRouter, publicQuery } from "./middleware";
+import { authRouter } from "./auth-router.js";
+import { grantRouter } from "./grant-router.js";
+import { applicationRouter } from "./application-router.js";
+import { adminRouter } from "./admin-router.js";
+import { contactRouter } from "./contact-router.js";
+import { createRouter, publicQuery } from "./middleware.js";
 
 export const appRouter = createRouter({
   ping: publicQuery.query(() => ({ ok: true, ts: Date.now() })),
