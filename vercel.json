@@ -2,19 +2,19 @@
   "version": 2,
   "routes": [
     {
-      "src": "/api/trpc/(.*)",
-      "dest": "/api/boot.js"
+      "src": "/assets/(.*)",
+      "dest": "dist/public/assets/$1",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "/api/(.*)",
-      "dest": "/api/boot.js"
-    },
-    {
-      "handle": "filesystem"
+      "dest": "dist/boot.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/api/boot.js"
+      "dest": "dist/boot.js"
     }
   ]
 }
